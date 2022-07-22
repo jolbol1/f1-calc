@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+    </head>
+    <body class="bg-slate-200 grid grid-cols-4">
+        <h1
+            class="text-4xl text-slate-900 font-extrabold text-center my-3 col-span-4"
+        >
+            F1 2022 AI Difficulty Calculator
+        </h1>
+        <div class="col-span-2 col-start-2 my-3">
+            <label
+                for="trackSelect"
+                class="block font-medium text-gray-700 text-lg"
+                >Select Track:</label
+            >
+            <select
+                id="trackSelect"
+                true
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+                <option value="Bahrain">Bahrain</option>
+                <option value="SaudiArabia">SaudiArabia</option>
+                <option value="Australia">Australia</option>
+                <option value="Imola">Imola</option>
+                <option value="Miami">Miami</option>
+                <option value="Spain">Spain</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Spain">Spain</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Canada">Canada</option>
+                <option value="GreatBritain">GreatBritain</option>
+                <option value="Austria">Austria</option>
+                <option value="France">France</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Italy">Italy</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Japan">Japan</option>
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Brazil">Brazil</option>
+                <option value="AbuDhabi">AbuDhabi</option>
+            </select>
+        </div>
+        <h1
+            id="trackTitle"
+            class="text-4xl text-slate-900 font-extrabold text-center my-3 col-span-4"
+        >
+            Bahrain
+        </h1>
+        <div id="results" class="col-span-4 my-3" hidden="true">
+            <p class="text-center col-span-4 my-3 text-lg font-normal">
+                Closest Lap Time:
+                <span id="closestLapTime" class="font-bold underline"></span>
+            </p>
+            <p class="text-center col-span-4 my-3 text-lg font-normal">
+                Recommended AI Level:
+                <span id="difficulty" class="font-bold underline"></span>
+            </p>
+        </div>
+        <div class="col-span-2 col-start-2 my-3">
+            <form id="lapTime">
+                <div class="shadow overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-2">
+                                <label
+                                    for="lapTimeMin"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                    >Minute</label
+                                >
+                                <input
+                                    id="lapTimeMin"
+                                    name="min"
+                                    type="number"
+                                    placeholder="1"
+                                    max="3"
+                                    required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div class="col-span-2">
+                                <label
+                                    for="lapTimeSec"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                    >Seconds</label
+                                >
+                                <input
+                                    id="lapTimeSec"
+                                    name="sec"
+                                    type="number"
+                                    placeholder="32"
+                                    max="59"
+                                    required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div class="col-span-2">
+                                <label
+                                    for="lapTimeMil"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                    >Milliseconds</label
+                                >
+                                <input
+                                    id="lapTimeMil"
+                                    name="mil"
+                                    type="number"
+                                    placeholder="329"
+                                    max="999"
+                                    required
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 text-center bg-gray-50 sm:px-6">
+                        <button
+                            type="submit"
+                            class="w-1/2 font-bold text-xl inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="./bundle.js"></script>
+</html>

@@ -2,6 +2,7 @@ export type Track = {
   aiTimes: { [key: string]: number }
   friendlyName: string
   trackName: string
+  flagmoji: string
 }
 
 export const getNearestBeatableTime = (
@@ -155,6 +156,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     trackName: 'Bahrain International Circuit',
     friendlyName: 'Bahrain',
+    flagmoji: '🇧🇭',
   },
   SaudiArabia: {
     aiTimes: {
@@ -272,6 +274,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     trackName: 'Jeddah Corniche Circuit',
     friendlyName: 'Saudi Arabia',
+    flagmoji: '🇸🇦',
   },
   Australia: {
     aiTimes: {
@@ -389,6 +392,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     trackName: 'Melbourne Grand Prix Circuit',
     friendlyName: 'Australia',
+    flagmoji: '🇦🇺',
   },
   Imola: {
     aiTimes: {
@@ -506,6 +510,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Italy (Imola)',
     trackName: 'Autodromo Enzo e Dino Ferrari',
+    flagmoji: '🇮🇹',
   },
   Miami: {
     aiTimes: {
@@ -623,6 +628,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Miami',
     trackName: 'Miami International Autodrome',
+    flagmoji: '🇺🇸',
   },
   Spain: {
     aiTimes: {
@@ -740,6 +746,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Spain',
     trackName: 'Circuit de Barcelona-Catalunya',
+    flagmoji: '🇪🇸',
   },
   Monaco: {
     aiTimes: {
@@ -857,6 +864,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Monaco',
     trackName: 'Circuit de Monaco',
+    flagmoji: '🇲🇨',
   },
   Azerbaijan: {
     aiTimes: {
@@ -974,6 +982,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Azerbaijan',
     trackName: 'Baku City Circuit',
+    flagmoji: '🇦🇿',
   },
   Canada: {
     aiTimes: {
@@ -1091,6 +1100,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Canada',
     trackName: 'Circuit Gilles Villeneuve',
+    flagmoji: '🇨🇦',
   },
   GreatBritain: {
     aiTimes: {
@@ -1208,6 +1218,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Great Britain',
     trackName: 'Silverstone Circuit',
+    flagmoji: '🇬🇧',
   },
   Austria: {
     aiTimes: {
@@ -1325,6 +1336,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Austria',
     trackName: 'Red Bull Ring',
+    flagmoji: '🇦🇹',
   },
   France: {
     aiTimes: {
@@ -1442,6 +1454,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'France',
     trackName: 'Circuit Paul Ricard',
+    flagmoji: '🇫🇷',
   },
   Hungary: {
     aiTimes: {
@@ -1559,6 +1572,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Hungary',
     trackName: 'Hungaroring',
+    flagmoji: '🇭🇺',
   },
   Belgium: {
     aiTimes: {
@@ -1676,6 +1690,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Belgium',
     trackName: 'Spa-Francorchamps',
+    flagmoji: '🇧🇪',
   },
   Netherlands: {
     aiTimes: {
@@ -1793,6 +1808,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Netherlands',
     trackName: 'CM.com Circuit Zandvoort',
+    flagmoji: '🇳🇱',
   },
   Italy: {
     aiTimes: {
@@ -1910,6 +1926,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Italy (Monza)',
     trackName: 'Autodromo Nazionale Monza',
+    flagmoji: '🇮🇹',
   },
   Singapore: {
     aiTimes: {
@@ -2027,6 +2044,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Singapore',
     trackName: 'Marina Bay Street Circuit',
+    flagmoji: '🇸🇬',
   },
   Japan: {
     aiTimes: {
@@ -2144,6 +2162,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Japan',
     trackName: 'Suzuka Circuit',
+    flagmoji: '🇯🇵',
   },
   USA: {
     aiTimes: {
@@ -2261,6 +2280,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'USA',
     trackName: 'Circuit of the Americas',
+    flagmoji: '🇺🇸',
   },
   Mexico: {
     aiTimes: {
@@ -2378,6 +2398,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Mexico',
     trackName: 'Autódromo Hermanos Rodríguez',
+    flagmoji: '🇲🇽',
   },
   Brazil: {
     aiTimes: {
@@ -2495,6 +2516,7 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Brazil',
     trackName: 'Autódromo José Carlos Pace',
+    flagmoji: '🇧🇷',
   },
   AbuDhabi: {
     aiTimes: {
@@ -2612,5 +2634,6 @@ export const TrackList: { [key: string]: Track } = {
     },
     friendlyName: 'Abu Dhabi',
     trackName: 'Yas Marina Circuit',
+    flagmoji: '🇦🇪',
   },
 }

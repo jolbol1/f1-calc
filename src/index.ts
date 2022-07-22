@@ -34,7 +34,10 @@ const onChange = (event: Event) => {
   selectedTrack = (<HTMLSelectElement>event.target).value
   const title = document.getElementById('trackTitle')
   if (title !== null) {
-    title.textContent = TrackList[selectedTrack]?.friendlyName ?? selectedTrack
+    const track = TrackList[selectedTrack]
+    if (track !== undefined) {
+      title.textContent = track.flagmoji + ' ' + track.friendlyName
+    }
   }
 }
 
@@ -52,4 +55,16 @@ if (selectTrackBox === null) {
   console.error('No element with ID trackSelect found')
 } else {
   selectTrackBox.addEventListener('change', onChange)
+  Object.keys(TrackList).forEach((trackName) => {
+    const track = TrackList[trackName]
+    if (track === undefined) {
+      throw 'could not find track'
+    } else {
+      const option = document.createElement('option')
+      option.value = trackName
+      option.innerText =
+        track.flagmoji + ' ' + track.friendlyName + ' - ' + track.trackName
+      selectTrackBox.appendChild(option)
+    }
+  })
 }

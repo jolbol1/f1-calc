@@ -22,6 +22,12 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Lessons Learnt
+
+This project was made for me to learn TypeScript and apply it. At the same time I have added git hooks, linting and followed a conventional-commit convention.
+
+I decided to keep it pure HTML as the app is small and I liked the idea of going back to simple HTML and Tailwind.
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -84,6 +90,10 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+This project uses [commitizen](https://github.com/commitizen/cz-cli) and follows the [conventional-commit](https://www.conventionalcommits.org/en/v1.0.0/) format, with gitmojis! These are dev dependencies and will use hooks to help you submit the right commit message when running `git commit -m 'message'.
+
+This project also runs prettier an eslint when commiting.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

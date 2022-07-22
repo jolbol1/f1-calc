@@ -15,10 +15,10 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 ### Built With
 
--   TypeScript
--   TailwindCSS
--   Webpack
--   HTML & CSS
+- TypeScript
+- TailwindCSS
+- Webpack
+- HTML & CSS
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -33,21 +33,21 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
--   npm
-    ```sh
-    npm install npm@latest -g
-    ```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
 1. Clone the repo
-    ```sh
-    git clone https://github.com/jolbol1/f1-calc.git
-    ```
+   ```sh
+   git clone https://github.com/jolbol1/f1-calc.git
+   ```
 2. Install NPM packages
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,10 +63,10 @@ Simply select the track, and enter your best lap time from an equal performance 
 
 ## Roadmap
 
--   [ ] Code cleanup
--   [ ] Lap time graphing
--   [ ] UI Redesign
--   [ ] Mobile consideration
+- [ ] Code cleanup
+- [ ] Lap time graphing
+- [ ] UI Redesign
+- [ ] Mobile consideration
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -2,119 +2,120 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>F1 2022 Difficulty Calculator</title>
   </head>
   <body
-    class="mx-3 bg-slate-200 dark:bg-slate-800 md:mx-12 lg:mx-0 lg:grid lg:grid-cols-4"
+    class="mx-3 flex flex-col items-center gap-12 bg-slate-200 dark:bg-slate-800 sm:mx-12"
   >
     <h1
-      class="col-span-4 my-6 text-center text-4xl font-extrabold text-slate-900 dark:text-gray-300"
+      class="w-full py-6 text-center text-2xl font-extrabold text-slate-900 dark:text-gray-300 md:text-4xl"
     >
       F1 2022 AI Difficulty Calculator
     </h1>
-    <div class="col-span-2 col-start-2 my-6">
-      <label
-        for="trackSelect"
-        class="block text-center text-lg font-medium text-gray-700 dark:text-gray-300 sm:text-left"
+    <div class="flex w-full flex-col md:w-3/4 xl:w-1/2">
+      <label for="trackSelect" class="text-gray-700 dark:text-gray-300"
         >Select Track</label
       >
       <select
         id="trackSelect"
         true
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        class="rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       ></select>
     </div>
-    <div class="col-span-4 my-6">
+    <div class="w-full md:w-3/4 xl:w-1/2">
       <h1
         id="trackTitle"
-        class="my-1 text-center text-4xl font-extrabold text-slate-900 dark:text-gray-300"
+        class="mb-6 text-center text-3xl font-bold text-slate-900 dark:text-gray-300 md:text-4xl"
       >
         🇧🇭 Bahrain
       </h1>
-      <h2 class="text-center text-lg dark:text-gray-300">
+      <h2 class="text-center font-semibold dark:text-gray-300 md:text-2xl">
         Bahrain International Circuit
       </h2>
     </div>
-    <div id="results" class="col-span-4 my-6" hidden="true">
-      <p
-        class="col-span-4 my-3 text-center text-lg font-normal dark:text-gray-300"
-      >
+    <div
+      id="results"
+      class="w-full text-center text-xl font-medium md:text-2xl"
+      hidden="true"
+    >
+      <p class="mb-3 dark:text-gray-300">
         Closest Lap Time:
         <span id="closestLapTime" class="font-bold underline"></span>
       </p>
-      <p
-        class="col-span-4 my-3 text-center text-lg font-normal dark:text-gray-300"
-      >
+      <p class="dark:text-gray-300">
         Recommended AI Level:
         <span id="difficulty" class="font-bold underline"></span>
       </p>
     </div>
-    <div class="col-span-2 col-start-2 my-6 dark:text-gray-300">
+    <div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2">
       <form id="lapTime">
         <div class="overflow-hidden rounded-md shadow">
-          <div class="bg-white px-4 py-5 dark:bg-slate-600 sm:p-6">
-            <div class="grid grid-cols-6 gap-6">
-              <div class="col-span-2">
-                <label
-                  for="lapTimeMin"
-                  class="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Minute</label
-                >
-                <input
-                  id="lapTimeMin"
-                  name="min"
-                  type="number"
-                  placeholder="1"
-                  max="3"
-                  min="0"
-                  required
-                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                />
-              </div>
+          <div class="bg-white px-4 py-6 dark:bg-slate-600">
+            <div class="">
+              <div class="grid grid-cols-3 gap-6">
+                <div class="col-span-1">
+                  <label
+                    for="lapTimeMin"
+                    class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
+                    >Minutes</label
+                  >
+                  <input
+                    id="lapTimeMin"
+                    name="min"
+                    type="number"
+                    placeholder="1"
+                    max="3"
+                    min="0"
+                    required
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  />
+                </div>
 
-              <div class="col-span-2">
-                <label
-                  for="lapTimeSec"
-                  class="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Seconds</label
-                >
-                <input
-                  id="lapTimeSec"
-                  name="sec"
-                  type="number"
-                  placeholder="32"
-                  max="59"
-                  min="0"
-                  required
-                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                />
-              </div>
+                <div class="col-span-1">
+                  <label
+                    for="lapTimeSec"
+                    class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
+                    >Seconds</label
+                  >
+                  <input
+                    id="lapTimeSec"
+                    name="sec"
+                    type="number"
+                    placeholder="32"
+                    max="59"
+                    min="0"
+                    required
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  />
+                </div>
 
-              <div class="col-span-2">
-                <label
-                  for="lapTimeMil"
-                  class="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
-                  >Milliseconds</label
-                >
-                <input
-                  id="lapTimeMil"
-                  name="mil"
-                  type="number"
-                  placeholder="329"
-                  max="999"
-                  min="0"
-                  required
-                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                />
+                <div class="col-span-1">
+                  <label
+                    for="lapTimeMil"
+                    class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
+                    >Milliseconds</label
+                  >
+                  <input
+                    id="lapTimeMil"
+                    name="mil"
+                    type="number"
+                    placeholder="329"
+                    max="999"
+                    min="0"
+                    required
+                    class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="bg-gray-100 px-4 py-3 text-center dark:bg-slate-700 sm:px-6"
+            class="bg-gray-100 px-6 py-6 text-center dark:bg-slate-700 lg:py-3"
           >
             <button
               type="submit"
-              class="inline-flex w-1/2 justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-xl font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-2 font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 md:text-xl lg:py-2 xl:w-1/2"
             >
               Calculate
             </button>

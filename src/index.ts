@@ -47,7 +47,7 @@ const input = (event: Event) => {
   const target = <HTMLInputElement>event.target
   const maxLength = target.maxLength
   const myLength = target.value.length
-  if (myLength >= maxLength) {
+  if (myLength === maxLength) {
     for (let index = 0; index < inputs.length; index++) {
       const element = inputs[index]
       if (target === element && index !== inputs.length - 1) {
@@ -63,8 +63,8 @@ const input = (event: Event) => {
       }
     }
   }
-  if (myLength >= 3) {
-    target.value = target.value.slice(0, 3)
+  if (myLength >= maxLength) {
+    target.value = target.value.slice(0, maxLength)
   }
 }
 

@@ -41,12 +41,40 @@ const onChange = (event: Event) => {
   }
 }
 
+const inputs = document.getElementsByTagName('input')
+
+const input = (event: Event) => {
+  const target = <HTMLInputElement>event.target
+  const maxLength = target.maxLength
+  const myLength = target.value.length
+  if (myLength >= maxLength) {
+    for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index]
+      if (target === element && index !== inputs.length - 1) {
+        inputs[index + 1]?.focus()
+      }
+    }
+  }
+  if (myLength === 0) {
+    for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index]
+      if (target === element && index !== 0) {
+        inputs[index - 1]?.focus()
+      }
+    }
+  }
+  if (myLength >= 3) {
+    target.value = target.value.slice(0, 3)
+  }
+}
+
 const lapTimeForm = document.getElementById('lapTime')
 
 if (lapTimeForm === null) {
   console.error('No Element with ID lapTime found')
 } else {
   lapTimeForm.addEventListener('submit', onSubmit)
+  lapTimeForm.addEventListener('input', input)
 }
 
 const selectTrackBox = document.getElementById('trackSelect')

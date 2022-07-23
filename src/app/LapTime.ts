@@ -4,38 +4,30 @@ export type Time = {
   mil: number
 }
 
-const GetTimeSerial = (time: Time) => {
-  const minSerial = (1 / 1440) * time.min
-  const secSerial = (1 / 86400) * time.sec
-  const milSerial = (1 / (1000 * 60 * 60 * 24)) * time.mil
-  return minSerial + secSerial + milSerial
-}
-
 const addLeadingZeros = (num: number, length: number) => {
   return String(num).padStart(length, '0')
 }
 
 export class LapTime {
   #lapTime: Time
-  #timeSerial: number
-  constructor(options: Time | number) {
-    if (typeof options === 'number') {
-      this.#timeSerial = options
-      const timeSerialDate: Date = new Date(
-        Math.round((options - 25569) * 86400 * 1000),
-      )
+  #dateTime: Date
+  constructor(input: Time | number) {
+    if (typeof input === 'number') {
+      this.#dateTime = new Date(input)
       this.#lapTime = {
-        min: timeSerialDate.getMinutes() ?? 0,
-        sec: timeSerialDate.getSeconds() ?? 0,
-        mil: timeSerialDate.getMilliseconds() ?? 0,
+        min: this.#dateTime.getMinutes(),
+        sec: this.#dateTime.getSeconds(),
+        mil: this.#dateTime.getMilliseconds(),
       }
     } else {
-      this.#lapTime = options
-      this.#timeSerial = GetTimeSerial(this.#lapTime)
+      this.#lapTime = input
+      const dateZero = new Date(0)
+      dateZero.setMinutes(input.min, input.sec, input.mil)
+      this.#dateTime = dateZero
     }
   }
-  getTimeSerial() {
-    return this.#timeSerial
+  getDateTime() {
+    return this.#dateTime
   }
   getFormatted() {
     return (

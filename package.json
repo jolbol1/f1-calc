@@ -53,5 +53,11 @@
     "commitizen": {
       "path": "./node_modules/cz-emoji-conventional"
     }
+  },
+  "dependencies": {
+    "@types/chart.js": "^2.9.37",
+    "chart.js": "^3.8.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "moment": "^2.29.4"
   }
 }

@@ -16,10 +16,8 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 ### Built With
 
-- TypeScript
-- TailwindCSS
-- Webpack
-- HTML & CSS
+- [![Typescript][typescript-badge]][typescript-url]
+- [![Tailwind][tailwind-badge]][tailwind-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -27,7 +25,7 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 This project was made for me to learn TypeScript and apply it. At the same time I have added git hooks, linting and followed a conventional-commit convention.
 
-I decided to keep it pure HTML as the app is small and I liked the idea of going back to simple HTML and Tailwind.
+I decided to keep it pure HTML and webpack as the app is small and I liked the idea of going back to simple HTML and Tailwind.
 
 <!-- GETTING STARTED -->
 
@@ -70,10 +68,10 @@ Simply select the track, and enter your best lap time from an equal performance 
 
 ## Roadmap
 
-- [ ] Code cleanup
-- [ ] Lap time graphing
-- [ ] UI Redesign
-- [ ] Mobile consideration
+- [x] Code cleanup
+- [x] Lap time graphing
+- [x] UI Redesign
+- [x] Mobile consideration
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -148,3 +146,7 @@ Project Link: [https://github.com/jolbol1/f1-calc](https://github.com/jolbol1/f1
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [jquery-url]: https://jquery.com
+[typescript-badge]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[typescript-url]: https://www.typescriptlang.org/
+[tailwind-badge]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[tailwind-url]: https://tailwindcss.com/

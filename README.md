@@ -6,6 +6,21 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+<br />
+<div align="center">
+  <a href="https://github.com/jolbol1/f1-calc">
+    <img src="https://i.imgur.com/Q7B6KpJ.png" alt="Logo" width="640" height="320">
+  </a>
+
+<h3 align="center">F1-Calc</h3>
+
+  <p align="center">
+    Simple AI Difficulty Calculator for F1 2022
+    <br />
+    <a href="https://jamesshopland.com/f1-calc/"><strong>View demo »</strong></a>
+  </p>
+</div>
+
 ## About The Project
 
 Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per track based on your best Time Trial lap time.

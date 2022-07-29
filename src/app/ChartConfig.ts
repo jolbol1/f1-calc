@@ -1,6 +1,25 @@
-import type { ChartData, ChartOptions, ChartType } from 'chart.js'
-import Chart, { ChartItem } from 'chart.js/auto'
+import type { ChartData, ChartOptions, ChartType, ChartItem } from 'chart.js'
 import 'chartjs-adapter-moment'
+import {
+  Chart,
+  LineElement,
+  PointElement,
+  LineController,
+  TimeScale,
+  TimeSeriesScale,
+  CategoryScale,
+  Tooltip,
+} from 'chart.js'
+
+Chart.register(
+  LineElement,
+  LineController,
+  TimeScale,
+  TimeSeriesScale,
+  CategoryScale,
+  PointElement,
+  Tooltip,
+)
 
 const legendColor =
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches

@@ -1,0 +1,14 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-slate-200;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		@apply bg-slate-800;
+	}
+}

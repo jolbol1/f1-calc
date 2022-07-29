@@ -1,29 +1,14 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "module": "CommonJS",
-    "target": "es6",
-    "lib": ["DOM", "DOM.Iterable"],
-    "allowJs": true,
-    "strict": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "exactOptionalPropertyTypes": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "importsNotUsedAsValues": "error",
-    "checkJs": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src/**/*"]
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"lib": ["es2019", "dom", "dom.iterable"]
+	}
 }

@@ -1,63 +1,52 @@
 {
-  "devDependencies": {
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@types/node": "^18.0.6",
-    "@types/webpack": "^5.28.0",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "@webpack-cli/generators": "^2.5.0",
-    "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
-    "commitizen": "^4.2.5",
-    "copy-webpack-plugin": "^10.2.4",
-    "css-loader": "^6.7.1",
-    "cz-emoji-conventional": "^1.0.1",
-    "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "postcss": "^8.4.14",
-    "postcss-loader": "^7.0.1",
-    "postcss-preset-env": "^7.7.2",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.12",
-    "style-loader": "^3.3.1",
-    "tailwindcss": "^3.1.6",
-    "ts-loader": "^9.3.1",
-    "typescript": "^4.7.4",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
-  },
-  "version": "1.0.0",
-  "description": "My webpack project",
-  "name": "my-webpack-project",
-  "scripts": {
-    "start": "webpack serve --mode=development --open",
-    "build": "webpack --config webpack-prod.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:check": "npx prettier --check .",
-    "prettier:fix": "npx prettier --write .",
-    "lint": "npx eslint .",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{css,less,scss,html,json,jsx,js,ts}": [
-      "prettier --write ."
-    ],
-    "*.{js,ts}": "eslint --fix"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-emoji-conventional"
-    }
-  },
-  "dependencies": {
-    "@types/chart.js": "^2.9.37",
-    "chart.js": "^3.8.0",
-    "chartjs-adapter-moment": "^1.0.0",
-    "moment": "^2.29.4"
-  }
+	"name": "f1-calc",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync && husky install",
+		"test": "playwright test",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"lint-staged": {
+		"*.{css,less,scss,html,json,jsx,js,.svelte}": [
+			"prettier --write --plugin-search-dir=. ."
+		]
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.22.2",
+		"@sveltejs/adapter-static": "^1.0.0-next.38",
+		"@sveltejs/kit": "next",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"autoprefixer": "^10.4.7",
+		"cz-emoji-conventional": "^1.0.1",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"postcss": "^8.4.14",
+		"postcss-load-config": "^4.0.1",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.7",
+		"tailwindcss": "^3.1.5",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.0"
+	},
+	"type": "module",
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-emoji-conventional"
+		}
+	}
 }

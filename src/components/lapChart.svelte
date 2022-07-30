@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { registerlapTimeChart } from '../app/ChartConfig';
-	import type { Track } from '../app/TrackUtils';
 	import type { Chart } from 'chart.js';
 	import { onMount } from 'svelte';
+	import { registerlapTimeChart } from '../app/ChartConfig';
+	import type { Track } from '../app/TrackUtils';
 	export let track: Track;
 	let ctx: CanvasRenderingContext2D;
 	let chartCanvas: HTMLCanvasElement;

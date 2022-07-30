@@ -51,6 +51,7 @@
 	},
 	"dependencies": {
 		"chart.js": "^3.8.2",
-		"chartjs-adapter-moment": "^1.0.0"
+		"chartjs-adapter-moment": "^1.0.0",
+		"moment": "^2.29.4"
 	}
 }

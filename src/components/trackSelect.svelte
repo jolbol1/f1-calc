@@ -6,17 +6,17 @@
 </script>
 
 <div
-	class="flex flex-col items-center flex-grow md:w-3/4 xl:w-1/2 text-gray-700 dark:text-gray-300"
+	class="flex flex-grow flex-col items-center text-gray-700 dark:text-gray-300 md:w-3/4 xl:w-1/2"
 >
-	<label for="trackSelect" class="font-bold mb-3">Select Track</label>
+	<label for="trackSelect" class="mb-3 font-bold">Select Track</label>
 	<div
-		class="rounded-full nm-flat-slate-200 dark:nm-flat-slate-700 leading-5 flex-grow w-full relative"
+		class="relative w-full flex-grow rounded-full leading-5 nm-flat-slate-200 dark:nm-flat-slate-700"
 	>
 		<select
 			id="trackSelect"
 			on:change={() => (hidden = true)}
 			bind:value={selected}
-			class="appearance-none w-full px-8 py-4 bg-transparent font-semibold"
+			class="w-full appearance-none bg-transparent px-8 py-4 font-semibold"
 		>
 			{#each Object.entries(tracks) as [track, trackInfo]}
 				<option value={track}
@@ -25,7 +25,7 @@
 			{/each}
 		</select>
 		<div
-			class="absolute right-0 top-0 h-full pr-2 md:pr-4 lg:pr-8 flex flex-col justify-center items-center pointer-events-none"
+			class="pointer-events-none absolute right-0 top-0 flex h-full flex-col items-center justify-center pr-2 md:pr-4 lg:pr-8"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

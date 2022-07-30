@@ -45,82 +45,65 @@
 </script>
 
 <div
-	class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 mb-6 nm-flat-slate-200-lg dark:nm-flat-slate-700-lg rounded-lg"
+	class="mb-6 w-full rounded-lg nm-flat-slate-200-lg dark:text-gray-300 dark:nm-flat-slate-700-lg md:w-3/4 xl:w-1/2"
 >
 	<form id="lapTime" on:submit|preventDefault={handleSubmit}>
 		<div class="overflow-hidden rounded-md shadow">
 			<div class="px-4 py-6 ">
-				<div class="">
-					<div class="grid grid-cols-3">
-						<div class="col-span-1">
-							<label for="lapTimeMin" class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
-								>Minutes</label
-							>
-							<div class="flex w-full flex-row items-center">
-								<input
-									on:input={input}
-									bind:this={inputs[0]}
-									id="lapTimeMin"
-									name="min"
-									type="number"
-									placeholder="1"
-									max="3"
-									min="0"
-									maxlength="1"
-									required
-									class="appearance-none rounded-full nm-inset-slate-200 dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
-								/>
-								<p class="mx-1 inline-block h-fit">:</p>
-							</div>
-						</div>
+				<label for="lapTimeMin" class="mb-3 block w-full text-center font-bold">Lap Time</label>
 
-						<div class="col-span-1">
-							<label for="lapTimeSec" class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
-								>Seconds</label
-							>
-							<div class="flex w-full flex-row items-end">
-								<input
-									on:input={input}
-									bind:this={inputs[1]}
-									id="lapTimeSec"
-									name="sec"
-									type="number"
-									placeholder="32"
-									max="59"
-									min="0"
-									maxlength="2"
-									required
-									class="appearance-none rounded-full nm-inset-slate-200 dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
-								/>
-								<p class="mx-1 inline-block h-fit">.</p>
-							</div>
-						</div>
+				<div
+					class="mt-3 flex w-full flex-grow flex-row justify-center rounded-full px-8 py-3 leading-5 nm-inset-slate-200 dark:nm-inset-slate-700"
+				>
+					<input
+						on:input={input}
+						bind:this={inputs[0]}
+						id="lapTimeMin"
+						name="min"
+						type="number"
+						placeholder="1"
+						max="3"
+						min="0"
+						maxlength="1"
+						required
+						class="flex-grow appearance-none bg-transparent text-right outline-none"
+					/>
+					<p class="mx-1 inline-block h-fit">:</p>
 
-						<div class="col-span-1">
-							<label for="lapTimeMil" class="mb-1 block text-sm text-gray-900 dark:text-gray-300"
-								>Milliseconds</label
-							>
-							<input
-								on:input={input}
-								bind:this={inputs[2]}
-								id="lapTimeMil"
-								name="mil"
-								type="number"
-								placeholder="329"
-								max="999"
-								min="0"
-								maxlength="3"
-								required
-								class="appearance-none rounded-full nm-inset-slate-200  dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
-							/>
-						</div>
-					</div>
+					<input
+						on:input={input}
+						bind:this={inputs[1]}
+						id="lapTimeSec"
+						name="sec"
+						type="number"
+						placeholder="32"
+						max="59"
+						min="0"
+						maxlength="2"
+						required
+						class="w-5 appearance-none bg-transparent outline-none"
+					/>
+					<p class="mx-1 inline-block h-fit">.</p>
+
+					<input
+						on:input={input}
+						bind:this={inputs[2]}
+						id="lapTimeMil"
+						name="mil"
+						type="number"
+						placeholder="329"
+						max="999"
+						min="0"
+						maxlength="3"
+						required
+						class="appearance-nonce flex-grow bg-transparent outline-none"
+					/>
 				</div>
 			</div>
 			<div class="px-6 py-6 text-center lg:py-3">
 				<button
 					type="submit"
-					class="text-white dark:text-gray-300 min-w-fit w-1/2 rounded-full bg-indigo-600 hover:bg-indigo-600-lg leading-5 px-8 py-4 uppercase font-bold tracking-widest transition duration-200 ease-in-out transform hover:scale-110"
+					class="hover:bg-indigo-600-lg w-1/2 min-w-fit transform rounded-full bg-indigo-600 px-8 py-4 font-bold uppercase leading-5 tracking-widest text-white transition duration-200 ease-in-out hover:scale-110 dark:text-gray-300"
 				>
 					Calculate
 				</button>

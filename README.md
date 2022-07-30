@@ -31,6 +31,8 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 ### Built With
 
+- [![Svelte][svelte-badge]][svelte-url]
+- [![Vite][vite-badge]][vite-url]
 - [![Typescript][typescript-badge]][typescript-url]
 - [![Tailwind][tailwind-badge]][tailwind-url]
 
@@ -38,9 +40,9 @@ Simple AI Difficulty Calculator for F1 2022. Find the best AI level to use per t
 
 ### Lessons Learnt
 
-This project was made for me to learn TypeScript and apply it. At the same time I have added git hooks, linting and followed a conventional-commit convention.
+This project was originally pure HTML and typescript with webpack. I made it to learn the basics of TypeScript. Since then I have rewritten the interactivity with SvelteKit to get a basic understanding of what that ha to offer.
 
-I decided to keep it pure HTML and webpack as the app is small and I liked the idea of going back to simple HTML and Tailwind.
+The original Webpack branch can be found at 'html-ts-only'
 
 <!-- GETTING STARTED -->
 
@@ -165,3 +167,7 @@ Project Link: [https://github.com/jolbol1/f1-calc](https://github.com/jolbol1/f1
 [typescript-url]: https://www.typescriptlang.org/
 [tailwind-badge]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
+[svelte-badge]: https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white
+[svelte-url]: https://svelte.dev/
+[vite-badge]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[vite-url]: https://vitejs.dev/

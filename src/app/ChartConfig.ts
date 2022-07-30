@@ -43,7 +43,6 @@ export const registerlapTimeChart = (
 				y: {
 					title: {
 						text: 'Lap Time',
-						color: legendColor,
 						display: true
 					},
 					type: 'time',
@@ -54,27 +53,19 @@ export const registerlapTimeChart = (
 							second: 'mm:ss.SSS'
 						}
 					},
-					ticks: {
-						color: legendColor
-					},
-					grid: {
-						color: '#6B7280'
-					},
 					min: Math.min(...Object.values(aiTimes)),
 					max: Math.max(...Object.values(aiTimes))
 				},
 				x: {
 					title: {
 						text: 'AI Level',
-						color: legendColor,
 						display: true
 					},
-					grid: {
-						color: '#6B7280'
-					},
 					ticks: {
-						maxTicksLimit: 12,
-						color: legendColor
+						maxTicksLimit: 12
+					},
+					grid: {
+						drawBorder: false
 					}
 				}
 			},

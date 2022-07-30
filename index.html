@@ -56,11 +56,11 @@
 			content="F1 Game 2022 AI Difficulty Calculator. Find the best AI level to play on based on your best lap time."
 		/>
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/f1-calc/_app/immutable/assets/__layout-4afa74c7.css">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/start-c5481788.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/index-31d97dbc.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/pages/__layout.svelte-c52e4029.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/pages/index.svelte-ecfed35c.js">
+	<link rel="stylesheet" href="/f1-calc/_app/immutable/assets/__layout-c64a216d.css">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/start-c7a205d7.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/index-c45a5f89.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/pages/__layout.svelte-5e3e1c83.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/pages/index.svelte-390b4c13.js">
 	</head>
 	<body>
 		<div>
@@ -77,11 +77,11 @@
 	<div class="w-full md:w-3/4 xl:w-1/2"><h1 id="trackTitle" class="mb-6 text-center text-3xl font-bold text-slate-900 dark:text-gray-300 md:text-4xl">🇧🇭
 		Bahrain</h1>
 	<h2 id="trackName" class="text-center font-semibold dark:text-gray-300 md:text-2xl">Bahrain International Circuit</h2></div>
-	<div id="results" class="w-full text-center text-xl font-medium md:text-2xl"><p class="mb-3 dark:text-gray-300">Closest Lap Time:
+	<div id="results" class="w-full text-center text-xl font-medium md:text-2xl" hidden><p class="mb-3 dark:text-gray-300">Closest Lap Time:
 		<span id="closestLapTime" class="font-bold underline"></span></p>
 	<p class="dark:text-gray-300">Recommended AI Level:
 		<span id="difficulty" class="font-bold underline"></span></p></div>
-	<div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 my-6"><form id="lapTime"><div class="overflow-hidden rounded-md shadow"><div class="bg-white px-4 py-6 dark:bg-slate-600"><div class=""><div class="grid grid-cols-3"><div class="col-span-1"><label for="lapTimeMin" class="mb-1 block text-sm text-gray-900 dark:text-gray-300">Minutes</label>
+	<div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 mb-6"><form id="lapTime"><div class="overflow-hidden rounded-md shadow"><div class="bg-white px-4 py-6 dark:bg-slate-600"><div class=""><div class="grid grid-cols-3"><div class="col-span-1"><label for="lapTimeMin" class="mb-1 block text-sm text-gray-900 dark:text-gray-300">Minutes</label>
 							<div class="flex w-full flex-row items-center"><input id="lapTimeMin" name="min" type="number" placeholder="1" max="3" min="0" maxlength="1" required class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500">
 								<p class="mx-1 inline-block h-fit">:</p></div></div>
 
@@ -92,16 +92,17 @@
 						<div class="col-span-1"><label for="lapTimeMil" class="mb-1 block text-sm text-gray-900 dark:text-gray-300">Milliseconds</label>
 							<input id="lapTimeMil" name="mil" type="number" placeholder="329" max="999" min="0" maxlength="3" required class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"></div></div></div></div>
 			<div class="bg-gray-100 px-6 py-6 text-center dark:bg-slate-700 lg:py-3"><button type="submit" class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-2 font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 md:text-xl lg:py-2 xl:w-1/2">Calculate
-				</button></div></div></form></div></div>
+				</button></div></div></form></div>
+	<div class="w-full md:w-3/4 xl:w-1/2"><canvas id="lapChart"></canvas></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="vf66dr">
-		import { set_public_env, start } from "/f1-calc/_app/immutable/start-c5481788.js";
+		<script type="module" data-sveltekit-hydrate="ueselb">
+		import { set_public_env, start } from "/f1-calc/_app/immutable/start-c7a205d7.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="vf66dr"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="ueselb"]').parentNode,
 			paths: {"base":"/f1-calc","assets":"/f1-calc"},
 			session: {},
 			route: true,

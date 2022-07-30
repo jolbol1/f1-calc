@@ -44,6 +44,8 @@ This project was originally pure HTML and typescript with webpack. I made it to 
 
 The original Webpack branch can be found at 'html-ts-only'
 
+Lastly, I also tried implementing [neumorphism](https://www.justinmind.com/ui-design/neumorphism) design into the app. Personally not my cup of tea.
+
 <!-- GETTING STARTED -->
 
 ## Getting Started

@@ -21,8 +21,6 @@ Chart.register(
 	Tooltip
 );
 
-const legendColor = 'black';
-
 export const registerlapTimeChart = (
 	chartElement: CanvasRenderingContext2D,
 	aiTimes: { [key: string]: number }

@@ -44,10 +44,12 @@
 	};
 </script>
 
-<div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 mb-6">
+<div
+	class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 mb-6 nm-flat-slate-200-lg dark:nm-flat-slate-700-lg rounded-lg"
+>
 	<form id="lapTime" on:submit|preventDefault={handleSubmit}>
 		<div class="overflow-hidden rounded-md shadow">
-			<div class="bg-white px-4 py-6 dark:bg-slate-600">
+			<div class="px-4 py-6 ">
 				<div class="">
 					<div class="grid grid-cols-3">
 						<div class="col-span-1">
@@ -66,7 +68,7 @@
 									min="0"
 									maxlength="1"
 									required
-									class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+									class="appearance-none rounded-full nm-inset-slate-200 dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
 								/>
 								<p class="mx-1 inline-block h-fit">:</p>
 							</div>
@@ -88,7 +90,7 @@
 									min="0"
 									maxlength="2"
 									required
-									class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+									class="appearance-none rounded-full nm-inset-slate-200 dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
 								/>
 								<p class="mx-1 inline-block h-fit">.</p>
 							</div>
@@ -109,16 +111,16 @@
 								min="0"
 								maxlength="3"
 								required
-								class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+								class="appearance-none rounded-full nm-inset-slate-200  dark:nm-inset-slate-700 leading-5 px-8 py-4 flex-grow w-full"
 							/>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="bg-gray-100 px-6 py-6 text-center dark:bg-slate-700 lg:py-3">
+			<div class="px-6 py-6 text-center lg:py-3">
 				<button
 					type="submit"
-					class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-2 font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 md:text-xl lg:py-2 xl:w-1/2"
+					class="text-white dark:text-gray-300 min-w-fit w-1/2 rounded-full bg-indigo-600 hover:bg-indigo-600-lg leading-5 px-8 py-4 uppercase font-bold tracking-widest transition duration-200 ease-in-out transform hover:scale-110"
 				>
 					Calculate
 				</button>

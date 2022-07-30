@@ -1,4 +1,5 @@
 <script lang="ts">
+	import LapChart from '../components/lapChart.svelte';
 	import { TrackList } from '../app/TrackUtils';
 	import Header from '../components/header.svelte';
 	import Results from '../components/results.svelte';
@@ -18,4 +19,5 @@
 	<TrackInfo trackName={track.trackName} flag={track.flagmoji} friendlyName={track.friendlyName} />
 	<Results {aiLevel} {closestLapTime} bind:hidden />
 	<TimeForm {track} bind:closestLapTime bind:aiLevel bind:hidden />
+	<LapChart {track} />
 </div>

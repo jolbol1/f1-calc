@@ -15,7 +15,7 @@ export type BeatableTime = {
 export const getNearestBeatableTime = (epochTime: number, track: Track): BeatableTime => {
 	const times = track!.aiTimes;
 	let closestVal = Infinity;
-	let beatableTime: BeatableTime = {
+	const beatableTime: BeatableTime = {
 		lapTime: new LapTime(times['0']!),
 		difficulty: '0'
 	};

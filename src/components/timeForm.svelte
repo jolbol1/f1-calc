@@ -4,6 +4,33 @@
 	export let track: Track;
 	export let closestLapTime: string;
 	export let aiLevel: string;
+	export let hidden: boolean = true;
+	const inputs: HTMLInputElement[] = [];
+
+	const input = (event: Event) => {
+		const target = <HTMLInputElement>event.target;
+		const maxLength = target.maxLength;
+		const myLength = target.value.length;
+		if (myLength === maxLength) {
+			for (let index = 0; index < inputs.length; index++) {
+				const element = inputs[index];
+				if (target === element && index !== inputs.length - 1) {
+					inputs[index + 1]?.focus();
+				}
+			}
+		}
+		if (myLength === 0) {
+			for (let index = 0; index < inputs.length; index++) {
+				const element = inputs[index];
+				if (target === element && index !== 0) {
+					inputs[index - 1]?.focus();
+				}
+			}
+		}
+		if (myLength >= maxLength) {
+			target.value = target.value.slice(0, maxLength);
+		}
+	};
 
 	const handleSubmit = (e: Event) => {
 		const laptimeForm = new FormData(<HTMLFormElement>e.target);
@@ -13,10 +40,11 @@
 		const result = getNearestBeatableTime(lapTime.getDateTime().getTime(), track);
 		closestLapTime = result.lapTime.getFormatted();
 		aiLevel = result.difficulty;
+		hidden = false;
 	};
 </script>
 
-<div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 my-6">
+<div class="w-full dark:text-gray-300 md:w-3/4 xl:w-1/2 mb-6">
 	<form id="lapTime" on:submit|preventDefault={handleSubmit}>
 		<div class="overflow-hidden rounded-md shadow">
 			<div class="bg-white px-4 py-6 dark:bg-slate-600">
@@ -28,6 +56,8 @@
 							>
 							<div class="flex w-full flex-row items-center">
 								<input
+									on:input={input}
+									bind:this={inputs[0]}
 									id="lapTimeMin"
 									name="min"
 									type="number"
@@ -48,6 +78,8 @@
 							>
 							<div class="flex w-full flex-row items-end">
 								<input
+									on:input={input}
+									bind:this={inputs[1]}
 									id="lapTimeSec"
 									name="sec"
 									type="number"
@@ -67,6 +99,8 @@
 								>Milliseconds</label
 							>
 							<input
+								on:input={input}
+								bind:this={inputs[2]}
 								id="lapTimeMil"
 								name="mil"
 								type="number"

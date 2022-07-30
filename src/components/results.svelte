@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let closestLapTime: string;
 	export let aiLevel: string;
+	export let hidden: boolean = true;
 </script>
 
-<div id="results" class="w-full text-center text-xl font-medium md:text-2xl">
+<div id="results" class="w-full text-center text-xl font-medium md:text-2xl" {hidden}>
 	<p class="mb-3 dark:text-gray-300">
 		Closest Lap Time:
 		<span id="closestLapTime" class="font-bold underline">{closestLapTime}</span>

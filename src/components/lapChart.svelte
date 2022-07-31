@@ -38,6 +38,6 @@
 	});
 </script>
 
-<div class="w-full md:w-3/4 xl:w-1/2">
+<div class="mb-6 w-full p-6 nm-inset-slate-700-lg md:w-3/4 xl:w-1/2">
 	<canvas bind:this={chartCanvas} id="lapChart" />
 </div>

@@ -52,7 +52,7 @@
 		}
 	},
 	"dependencies": {
-		"chart.js": "^3.8.2",
+		"chart.js": "^3.9.1",
 		"chartjs-adapter-moment": "^1.0.0",
 		"moment": "^2.29.4"
 	}

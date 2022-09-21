@@ -56,12 +56,14 @@
 			content="F1 Game 2022 AI Difficulty Calculator. Find the best AI level to play on based on your best lap time."
 		/>
 		<meta http-equiv="content-security-policy" content="">
-	<link href="/f1-calc/_app/immutable/assets/+layout-2624eae8.css" rel="stylesheet">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/start-be8562bb.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/index-e8620160.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/singletons-756bd863.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/components/pages/_layout.svelte-b31de7b6.js">
-	<link rel="modulepreload" href="/f1-calc/_app/immutable/components/pages/_page.svelte-ba936ef5.js">
+	<link href="/f1-calc/_app/immutable/assets/_layout-2d59978d.css" rel="stylesheet">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/start-712ce3a0.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/index-95bd3929.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/singletons-51b794ce.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/components/pages/_layout.svelte-5769ed6e.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/chunks/_layout-8d2a742b.js">
+	<link rel="modulepreload" href="/f1-calc/_app/immutable/components/pages/_page.svelte-21a2ad1a.js">
 	</head>
 	<body>
 		<div>
@@ -98,16 +100,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="wkmy98">
-		import { set_public_env, start } from "/f1-calc/_app/immutable/start-be8562bb.js";
-
-		set_public_env({});
+		import { start } from "/f1-calc/_app/immutable/start-712ce3a0.js";
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="wkmy98"]').parentNode,
-			paths: {"base":"/f1-calc","assets":"/f1-calc"},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
+			env: {},
 			hydrate: {
 				status: 200,
 				error: null,
@@ -115,8 +111,11 @@
 				params: {},
 				routeId: "",
 				data: (function(a){return [a,a]}(null)),
-				errors: null
-			}
+				form: null
+			},
+			paths: {"base":"/f1-calc","assets":"/f1-calc"},
+			target: document.querySelector('[data-sveltekit-hydrate="wkmy98"]').parentNode,
+			trailing_slash: "never"
 		});
 	</script>
 	</div>

@@ -13,9 +13,6 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		prerender: {
-			default: true
-		},
 		paths: {
 			// change below to your repo name
 			base: '/f1-calc'

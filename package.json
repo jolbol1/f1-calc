@@ -22,7 +22,7 @@
 		"@playwright/test": "^1.27.1",
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
 		"@sveltejs/kit": "^1.0.0-next.524",
-		"@typescript-eslint/eslint-plugin": "^5.40.1",
+		"@typescript-eslint/eslint-plugin": "^5.43.0",
 		"@typescript-eslint/parser": "^5.41.0",
 		"autoprefixer": "^10.4.13",
 		"cz-emoji-conventional": "^1.0.1",

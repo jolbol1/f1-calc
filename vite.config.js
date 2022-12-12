@@ -4,7 +4,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 const config = {
 	plugins: [sveltekit()],
 	ssr: {
-		noExternal: ['chart.js', 'moment']
+		noExternal: ['chart.js', 'chartjs-adapter-moment', 'moment']
 	}
 };
 

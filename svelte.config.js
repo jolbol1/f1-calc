@@ -12,11 +12,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
-		paths: {
-			// change below to your repo name
-			base: '/f1-calc'
-		}
+		adapter: adapter()
 	}
 };
 
